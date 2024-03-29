@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  weather-app:
+    build: .
+    image: weather-app:2.0
+    container_name: weather
+    ports: 
+      - "5000:80"
+    deploy:
+      resources:
+        limits:
+          memory: 1g
+          cpus: "1"
